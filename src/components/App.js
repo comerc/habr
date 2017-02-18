@@ -36,12 +36,6 @@ class App extends Component {
           title={title}
           titleTemplate="%s / Хабрахабр"
           defaultTitle="Хабрахабр"
-          link={[
-            {rel: 'stylesheet', href: '/styles/posts.css', media: 'all'},
-            {rel: 'stylesheet', href: '/styles/forms.css', media: 'all'},
-            {rel: 'stylesheet', href: '/styles/all.css', media: 'all'},
-            {rel: 'stylesheet', href: '/styles/global_main.css', media: 'all'}
-          ]}
         />
         <div className="layout__navbar">
           <MainNavBar></MainNavBar>
