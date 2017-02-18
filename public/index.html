@@ -5,7 +5,7 @@
     <meta content="width=1024" name="viewport">
     <title>Хабрахабр</title>
     <meta name="referrer" content="unsafe-url">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <link rel="shortcut icon" href="/favicon.ico">
     <!--
       Notice the use of %PUBLIC_URL% in the tag above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -52,8 +52,8 @@
         }
       }(this));
     </script>
-    <script src="%PUBLIC_URL%/scripts/jquery-1.8.3.min.js"></script>
-    <script src="%PUBLIC_URL%/scripts/jquery.scrollTo.min.js"></script>
+    <script src="/scripts/jquery-1.8.3.min.js"></script>
+    <script src="/scripts/jquery.scrollTo.min.js"></script>
     <script>
       $(document).ready(function(){window.last_scroll_position=0;var e=$("#scroll_to_top"),t=0,s=!1;e.on("click",function(t){t.preventDefault(),e.hasClass("back-down")?(e.attr("title","Наверх").removeClass("back-down"),$.scrollTo(window.last_scroll_position,700,{axis:"y"}),window.last_scroll_position=0):(window.last_scroll_position=window.pageYOffset,e.attr("title","Вниз").addClass("back-down"),$.scrollTo(0,700,{axis:"y"}))}),$(window).on("scroll",function(){window.pageYOffset>100?s||(e.removeClass("hidden"),s=!0):s&&(e.addClass("hidden"),s=!1),t<window.pageYOffset&&e.hasClass("back-down")&&e.removeClass("back-down"),t=window.pageYOffset})});
     </script>
