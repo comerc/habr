@@ -20,7 +20,7 @@ class NotFound extends Component {
         <Helmet
           defaultTitle="Хабрахабр"
           link={[
-            {rel: 'stylesheet', href: process.env.PUBLIC_URL + '/styles/access_deny.css', media: 'all'}
+            {rel: 'stylesheet', href: '/styles/access_deny.css', media: 'all'}
           ]}
         />
         <div className="main">

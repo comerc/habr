@@ -37,10 +37,10 @@ class App extends Component {
           titleTemplate="%s / Хабрахабр"
           defaultTitle="Хабрахабр"
           link={[
-            {rel: 'stylesheet', href: process.env.PUBLIC_URL + '/styles/posts.css', media: 'all'},
-            {rel: 'stylesheet', href: process.env.PUBLIC_URL + '/styles/forms.css', media: 'all'},
-            {rel: 'stylesheet', href: process.env.PUBLIC_URL + '/styles/all.css', media: 'all'},
-            {rel: 'stylesheet', href: process.env.PUBLIC_URL + '/styles/global_main.css', media: 'all'}
+            {rel: 'stylesheet', href: '/styles/posts.css', media: 'all'},
+            {rel: 'stylesheet', href: '/styles/forms.css', media: 'all'},
+            {rel: 'stylesheet', href: '/styles/all.css', media: 'all'},
+            {rel: 'stylesheet', href: '/styles/global_main.css', media: 'all'}
           ]}
         />
         <div className="layout__navbar">
