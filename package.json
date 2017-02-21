@@ -1,8 +1,8 @@
 {
-  "name": "habr",
+  "name": "yobr.ru",
   "version": "0.1.0",
   "license": "MIT",
-  "homepage": "https://comerc.github.io/habr",
+  "homepage": "https://comerc.github.io/yobr.ru",
   "devDependencies": {
     "gh-pages": "^0.12.0",
     "react-scripts": "0.8.5",
