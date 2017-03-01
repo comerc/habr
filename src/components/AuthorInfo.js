@@ -21,14 +21,14 @@ const AuthorInfo = ({ author: { id , nick, name, avatar, specialization, contact
 
   return (
     <div className="author-info author-info_top">
-      <a href={`/#/users/${nick}/`} className="author-info__image" onClick={ga.bind(void 0, 'author_info_bottom', 'profile', nick)}>
+      <a href={`/#/users/${nick}/`} className="author-info__image" onClick={ga('author_info_bottom', 'profile', nick)}>
         <img src={avatar} className="author-info__image-pic" alt={name} />
       </a>
       <div className="author-info__desc">{/* убрал css-класс js-user_${id} */}
         <div className="author-info__username">
-          <a href={`/#/users/${nick}/`} className="author-info__name" onClick={ga.bind(void 0, 'author_info_bottom', 'profile', nick)}>{name}</a>
+          <a href={`/#/users/${nick}/`} className="author-info__name" onClick={ga('author_info_bottom', 'profile', nick)}>{name}</a>
           &nbsp;
-          <a href={`/#/users/${nick}/`} className="author-info__nick" onClick={ga.bind(void 0, 'author_info_bottom', 'profile', nick)}>{`@${nick}`}</a>
+          <a href={`/#/users/${nick}/`} className="author-info__nick" onClick={ga('author_info_bottom', 'profile', nick)}>{`@${nick}`}</a>
           <div className="karma__widjet voting-wjt voting-wjt_small js-karma" title="Карма пользователя">
             <button type="button" className="voting-wjt__button voting-wjt__button_plus js-vote_plus" onClick={karmaVotePlus} title="Повысить карму">
               <span>↑</span>
@@ -46,7 +46,7 @@ const AuthorInfo = ({ author: { id , nick, name, avatar, specialization, contact
             <span className="user-rating__value">{rating.toFixed(1)}</span>
           </div>
           <div className="author-info__buttons buttons">
-            <a href={`/#/conversations/${nick}`} className="button" title="Написать письмо" onClick={ga.bind(void 0, 'author_info_bottom', 'write_message', nick)}>Написать</a>
+            <a href={`/#/conversations/${nick}`} className="button" title="Написать письмо" onClick={ga('author_info_bottom', 'write_message', nick)}>Написать</a>
           </div>
         </div>
         { !!specialization && <div className="author-info__specialization">{specialization}</div> }

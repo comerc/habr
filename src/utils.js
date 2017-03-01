@@ -1,4 +1,4 @@
-export const ga = (eventCategory, eventAction, eventLabel) => {
+export const ga = (eventCategory, eventAction, eventLabel) => () => {
   if (typeof window.ga === 'function') {
     window.ga('send', 'event', eventCategory, eventAction, eventLabel)
   }
