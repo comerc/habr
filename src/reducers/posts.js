@@ -78,55 +78,55 @@ const initialState = [
     title: 'Zabbix-мониторинг данных в БД Oracle без unixODBC',
     content: 'Была поставлена задача: реализовать мониторинг БД Oracle средствами Zabbix, а именно — отслеживать параметры табличных пространств на определенном инстансе. Раз задача поставлена, значит делаем. Как известно, Zabbix предоставляет возможность через предопределенный тип данных осуществлять запросы к базам данным и получать результат запроса.'
   },
-  {
-    id: 321564,
-    published: 'сегодня в 12:00',
-    viewsCount: 10400,
-    favoritesCount: 61,
-    author: {
-      avatar: 'https://hsto.org/getpro/habr/avatars/f89/cd2/7e9/f89cd27e95dc7b8c1e3db4d56c77309b.png',
-      nick: 'Halt',
-      name: 'Дмитрий Каши́цын',
-    },
-    flow: { id: 'develop', name: 'Разработка' },
-    hubs: [{ id: 'webdev', name: 'Разработка веб-сайтов' }],
-    title: 'Процедурные макросы в Rust 1.15',
-    content: 'Ребята, свершилось! После долгих шести недель ожидания наконец вышла версия Rust 1.15 с блекджеком и процедурными макросами.'
-  },
-  {
-    id: 321560,
-    published: '10 февраля в 20:02',
-    viewsCount: 12300,
-    favoritesCount: 163,
-    author: {
-      avatar: 'https://habrastorage.org/getpro/habr/avatars/45f/298/67b/45f29867be422cdd754bd2c1a413028a.png',
-      nick: 'TM_content',
-      name: 'Контент-студия',
-    },
-    flow: { id: 'develop', name: 'Разработка' },
-    hubs: [{ id: 'webdev', name: 'Разработка веб-сайтов' }],
-    title: 'Сравнение решений по балансировке высоконагруженных систем',
-    content: 'И вновь мы публикуем расшифровки выступлений с конференции HighLoad++, которая прошла в подмосковном Сколково 7—8 ноября 2016 года. Сегодня Евгений Пивень знакомит нас с решениями балансировки в облаках.'
-  },
-  {
-    id: 321606,
-    published: '10 февраля в 18:21',
-    viewsCount: 11700,
-    favoritesCount: 168,
-    author: {
-      avatar: 'https://habrastorage.org/getpro/habr/avatars/10c/966/59f/10c96659ff7013592cdf926e17e2195f.jpg',
-      nick: 'conspiratus',
-      name: 'Константин',
-      specialization: 'PM, Analyst, Developer, AVR Developer.',
-      votingCounter: 7,
-      karma: 7.0,
-      rating: 21.6
-    },
-    flow: { id: 'develop', name: 'Разработка' },
-    hubs: [{ id: 'webdev', name: 'Разработка веб-сайтов' }],
-    title: 'Home Assistant или еще один «мозг» для проекта типа «Умный Дом»',
-    content: 'Добрый день, уважаемый читатель.'
-  },
+  // {
+  //   id: 321564,
+  //   published: 'сегодня в 12:00',
+  //   viewsCount: 10400,
+  //   favoritesCount: 61,
+  //   author: {
+  //     avatar: 'https://hsto.org/getpro/habr/avatars/f89/cd2/7e9/f89cd27e95dc7b8c1e3db4d56c77309b.png',
+  //     nick: 'Halt',
+  //     name: 'Дмитрий Каши́цын',
+  //   },
+  //   flow: { id: 'develop', name: 'Разработка' },
+  //   hubs: [{ id: 'webdev', name: 'Разработка веб-сайтов' }],
+  //   title: 'Процедурные макросы в Rust 1.15',
+  //   content: 'Ребята, свершилось! После долгих шести недель ожидания наконец вышла версия Rust 1.15 с блекджеком и процедурными макросами.'
+  // },
+  // {
+  //   id: 321560,
+  //   published: '10 февраля в 20:02',
+  //   viewsCount: 12300,
+  //   favoritesCount: 163,
+  //   author: {
+  //     avatar: 'https://habrastorage.org/getpro/habr/avatars/45f/298/67b/45f29867be422cdd754bd2c1a413028a.png',
+  //     nick: 'TM_content',
+  //     name: 'Контент-студия',
+  //   },
+  //   flow: { id: 'develop', name: 'Разработка' },
+  //   hubs: [{ id: 'webdev', name: 'Разработка веб-сайтов' }],
+  //   title: 'Сравнение решений по балансировке высоконагруженных систем',
+  //   content: 'И вновь мы публикуем расшифровки выступлений с конференции HighLoad++, которая прошла в подмосковном Сколково 7—8 ноября 2016 года. Сегодня Евгений Пивень знакомит нас с решениями балансировки в облаках.'
+  // },
+  // {
+  //   id: 321606,
+  //   published: '10 февраля в 18:21',
+  //   viewsCount: 11700,
+  //   favoritesCount: 168,
+  //   author: {
+  //     avatar: 'https://habrastorage.org/getpro/habr/avatars/10c/966/59f/10c96659ff7013592cdf926e17e2195f.jpg',
+  //     nick: 'conspiratus',
+  //     name: 'Константин',
+  //     specialization: 'PM, Analyst, Developer, AVR Developer.',
+  //     votingCounter: 7,
+  //     karma: 7.0,
+  //     rating: 21.6
+  //   },
+  //   flow: { id: 'develop', name: 'Разработка' },
+  //   hubs: [{ id: 'webdev', name: 'Разработка веб-сайтов' }],
+  //   title: 'Home Assistant или еще один «мозг» для проекта типа «Умный Дом»',
+  //   content: 'Добрый день, уважаемый читатель.'
+  // },
   {
     id: 321622,
     published: '11 февраля в 12:18',

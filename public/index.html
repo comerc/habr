@@ -5,7 +5,11 @@
     <meta content="width=1024" name="viewport">
     <title>Хабрахабр</title>
     <meta name="referrer" content="unsafe-url">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/styles/posts.css" media="all">
+    <link rel="stylesheet" href="/styles/forms.css" media="all">
+    <link rel="stylesheet" href="/styles/all.css" media="all">
+    <link rel="stylesheet" href="/styles/global_main.css" media="all">
     <!--
       Notice the use of %PUBLIC_URL% in the tag above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -16,7 +20,7 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <style type="text/css">
-      @font-face{font-family:'Fira Sans';font-style:normal;font-weight:400;src:url(%PUBLIC_URL%/fonts/hg-FiraSans-Regular.eot);src:local("Fira Sans"),local("FiraSans-Regular"),url(%PUBLIC_URL%/fonts/hg-FiraSans-Regular.eot?#iefix) format("embedded-opentype"),url(%PUBLIC_URL%/fonts/hg-FiraSans-Regular.woff2) format("woff2"),url(%PUBLIC_URL%/fonts/hg-FiraSans-Regular.woff) format("woff"),url(%PUBLIC_URL%/fonts/hg-FiraSans-Regular.ttf) format("truetype")}@font-face{font-family:'Fira Sans';font-style:normal;font-weight:500;src:url(%PUBLIC_URL%/fonts/hg-FiraSans-Medium.eot);src:local("Fira Sans Medium"),local("FiraSans-Medium"),url(%PUBLIC_URL%/fonts/hg-FiraSans-Medium.eot?#iefix) format("embedded-opentype"),url(%PUBLIC_URL%/fonts/hg-FiraSans-Medium.woff2) format("woff2"),url(%PUBLIC_URL%/fonts/hg-FiraSans-Medium.woff) format("woff"),url(%PUBLIC_URL%/fonts/hg-FiraSans-Medium.ttf) format("truetype")}
+      @font-face{font-family:'Fira Sans';font-style:normal;font-weight:400;src:url(/fonts/hg-FiraSans-Regular.eot);src:local("Fira Sans"),local("FiraSans-Regular"),url(/fonts/hg-FiraSans-Regular.eot?#iefix) format("embedded-opentype"),url(/fonts/hg-FiraSans-Regular.woff2) format("woff2"),url(/fonts/hg-FiraSans-Regular.woff) format("woff"),url(/fonts/hg-FiraSans-Regular.ttf) format("truetype")}@font-face{font-family:'Fira Sans';font-style:normal;font-weight:500;src:url(/fonts/hg-FiraSans-Medium.eot);src:local("Fira Sans Medium"),local("FiraSans-Medium"),url(/fonts/hg-FiraSans-Medium.eot?#iefix) format("embedded-opentype"),url(/fonts/hg-FiraSans-Medium.woff2) format("woff2"),url(/fonts/hg-FiraSans-Medium.woff) format("woff"),url(/fonts/hg-FiraSans-Medium.ttf) format("truetype")}
     </style>
     <script>
       (function(){'use strict';var f,g=[];function l(a){g.push(a);1==g.length&&f()}function m(){for(;g.length;)g[0](),g.shift()}f=function(){setTimeout(m)};function n(a){this.a=p;this.b=void 0;this.f=[];var b=this;try{a(function(a){q(b,a)},function(a){r(b,a)})}catch(c){r(b,c)}}var p=2;function t(a){return new n(function(b,c){c(a)})}function u(a){return new n(function(b){b(a)})}function q(a,b){if(a.a==p){if(b==a)throw new TypeError;var c=!1;try{var d=b&&b.then;if(null!=b&&"object"==typeof b&&"function"==typeof d){d.call(b,function(b){c||q(a,b);c=!0},function(b){c||r(a,b);c=!0});return}}catch(e){c||r(a,e);return}a.a=0;a.b=b;v(a)}}
@@ -52,8 +56,8 @@
         }
       }(this));
     </script>
-    <script src="%PUBLIC_URL%/scripts/jquery-1.8.3.min.js"></script>
-    <script src="%PUBLIC_URL%/scripts/jquery.scrollTo.min.js"></script>
+    <script src="/scripts/jquery-1.8.3.min.js"></script>
+    <script src="/scripts/jquery.scrollTo.min.js"></script>
     <script>
       $(document).ready(function(){window.last_scroll_position=0;var e=$("#scroll_to_top"),t=0,s=!1;e.on("click",function(t){t.preventDefault(),e.hasClass("back-down")?(e.attr("title","Наверх").removeClass("back-down"),$.scrollTo(window.last_scroll_position,700,{axis:"y"}),window.last_scroll_position=0):(window.last_scroll_position=window.pageYOffset,e.attr("title","Вниз").addClass("back-down"),$.scrollTo(0,700,{axis:"y"}))}),$(window).on("scroll",function(){window.pageYOffset>100?s||(e.removeClass("hidden"),s=!0):s&&(e.addClass("hidden"),s=!1),t<window.pageYOffset&&e.hasClass("back-down")&&e.removeClass("back-down"),t=window.pageYOffset})});
     </script>
