@@ -11,13 +11,14 @@ import { actions as editPostActions } from '../ducks/editPost'
 
 const TITLE_MAX_LENGTH = 120
 
-const TopicAdd = ({ post: { title }, inputTitle, submit }) => {
+const TopicAdd = ({ post: { title }, inputTitle, submit, router: { push } }) => {
 
   let textareaContent = null
 
   const doSubmit = (event) => {
     event.preventDefault()
     submit({ title, content: textareaContent.value })
+    push('/')
   }
 
   const doInputTitle = (event) => {

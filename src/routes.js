@@ -62,3 +62,4 @@ export default (
 
 // TODO редирект, если блог компании: `/#/post/${id}/` > `/#/company/${nick}/blog/${id}/`
 
+// TODO подключить https://github.com/taion/react-router-scroll
