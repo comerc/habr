@@ -1,7 +1,9 @@
 import { createAction, createReducer } from 'redux-act'
 
-export const inputTitle = createAction('@@edit_post/INPUT_TITLE', title => ({ title }))
-export const submit = createAction('@@edit_post/SUBMIT', post => post)
+export const actions = {
+  inputTitle: createAction('@@edit_post/INPUT_TITLE', title => ({ title })),
+  submit: createAction('@@edit_post/SUBMIT', post => post),
+}
 
 const initialState = {
   flow: '',
@@ -10,8 +12,8 @@ const initialState = {
 }
 
 const reducer = createReducer({
-  [inputTitle]: (state, { title }) => ({...state, title}),
-  [submit]: (state, post) => ({...state, ...post})
+  [actions.inputTitle]: (state, { title }) => ({...state, title}),
+  [actions.submit]: (state, post) => ({...state, ...post})
 }, initialState)
 
 export default reducer
