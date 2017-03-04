@@ -1,6 +1,6 @@
 {
   "name": "yobr.ru",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "license": "MIT",
   "homepage": "https://comerc.github.io/yobr.ru",
   "devDependencies": {
@@ -28,5 +28,8 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "deploy": "npm run build&&gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
   }
 }
