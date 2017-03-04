@@ -8,7 +8,7 @@ import { Router, Route, IndexRoute, Redirect, hashHistory } from 'react-router'
 import { syncHistoryWithStore } from 'react-router-redux'
 import createLogger from 'redux-logger'
 
-import reducer from './reducers'
+import reducer from './ducks'
 
 import App from './components/App'
 import PostTeaserList from './components/PostTeaserList'

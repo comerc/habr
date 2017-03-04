@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import * as EditPostActions from '../actions/EditPostActions'
+import * as EditPostActions from '../ducks/editPost'
 
 const TITLE_MAX_LENGTH = 120
 
@@ -38,10 +38,6 @@ const TopicAdd = ({ post: { title }, inputTitle, submit }) => {
   )
 }
 
-const TopicAddContainer = (props) => {
-  return <TopicAdd {...props}/>
-}
-
 const mapStateToProps = (state) => ({
   post: state.editPost
 })
@@ -50,4 +46,4 @@ const mapDispatchToProps = (dispatch) => {
   return bindActionCreators(EditPostActions, dispatch)
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(TopicAddContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(TopicAdd)
