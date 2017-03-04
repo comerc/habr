@@ -1,7 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import * as EditPostActions from '../ducks/editPost'
+import { actions as editPostActions } from '../ducks/editPost'
+
+// TODO понимание PureComponent
+// https://www.youtube.com/watch?v=Pc3RKELjB-0
+
+// TODO как сделать PureComponent из функционального компонента?
+// https://github.com/facebook/react/issues/5677#issuecomment-280295107
 
 const TITLE_MAX_LENGTH = 120
 
@@ -43,7 +49,7 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators(EditPostActions, dispatch)
+  return bindActionCreators(editPostActions, dispatch)
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(TopicAdd)
