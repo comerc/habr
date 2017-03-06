@@ -1,14 +1,15 @@
 import React from 'react'
+import { Link } from 'react-router'
 
 const UserMenu = () => (
   <dl className="user">
-    <dt><a href="/#/users/comerc/">comerc</a></dt>
-    <dd><a href="/#/feed/">Лента</a></dd>
-    <dd><a href="/#/tracker/">Трекер</a></dd>
-    <dd><a href="/#/topic/add/">Написать</a></dd>
-    <dd><a href="/#/conversations/">Диалоги</a></dd>
-    <dd><a href="/#/auth/settings/">Настройки</a></dd>
-    <dd><a href="/#/ppa/">ППА</a></dd>
+    <dt><Link to="/users/comerc/">comerc</Link></dt>
+    <dd><Link to="/feed/">Лента</Link></dd>
+    <dd><Link to="/tracker/">Трекер</Link></dd>
+    <dd><Link to="/topic/add/">Написать</Link></dd>
+    <dd><Link to="/conversations/">Диалоги</Link></dd>
+    <dd><Link to="/auth/settings/">Настройки</Link></dd>
+    <dd><Link to="/ppa/">ППА</Link></dd>
   </dl>
 )
 

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router'
 
 import { ga, plural } from '../utils'
 
@@ -21,14 +22,14 @@ const AuthorInfo = ({ author: { id , nick, name, avatar, specialization, contact
 
   return (
     <div className="author-info author-info_top">
-      <a href={`/#/users/${nick}/`} className="author-info__image" onClick={ga('author_info_bottom', 'profile', nick)}>
+      <Link to={`/users/${nick}/`} className="author-info__image" onClick={ga('author_info_bottom', 'profile', nick)}>
         <img src={avatar} className="author-info__image-pic" alt={name} />
-      </a>
+      </Link>
       <div className="author-info__desc">{/* убрал css-класс js-user_${id} */}
         <div className="author-info__username">
-          <a href={`/#/users/${nick}/`} className="author-info__name" onClick={ga('author_info_bottom', 'profile', nick)}>{name}</a>
+          <Link to={`/users/${nick}/`} className="author-info__name" onClick={ga('author_info_bottom', 'profile', nick)}>{name}</Link>
           &nbsp;
-          <a href={`/#/users/${nick}/`} className="author-info__nick" onClick={ga('author_info_bottom', 'profile', nick)}>{`@${nick}`}</a>
+          <Link to={`/users/${nick}/`} className="author-info__nick" onClick={ga('author_info_bottom', 'profile', nick)}>{`@${nick}`}</Link>
           <div className="karma__widjet voting-wjt voting-wjt_small js-karma" title="Карма пользователя">
             <button type="button" className="voting-wjt__button voting-wjt__button_plus js-vote_plus" onClick={karmaVotePlus} title="Повысить карму">
               <span>↑</span>
@@ -46,13 +47,13 @@ const AuthorInfo = ({ author: { id , nick, name, avatar, specialization, contact
             <span className="user-rating__value">{rating.toFixed(1)}</span>
           </div>
           <div className="author-info__buttons buttons">
-            <a href={`/#/conversations/${nick}`} className="button" title="Написать письмо" onClick={ga('author_info_bottom', 'write_message', nick)}>Написать</a>
+            <Link to={`/conversations/${nick}`} className="button" title="Написать письмо" onClick={ga('author_info_bottom', 'write_message', nick)}>Написать</Link>
           </div>
         </div>
         { !!specialization && <div className="author-info__specialization">{specialization}</div> }
         { !!contacts && contacts.length > 0 &&
           <ul className="author-info__contacts user-contacts">
-            { contacts.map(contact => <li className="user-contacts__item" key={contact.type}><a href={contact.url} target="_blank">{contact.type}</a></li>) }
+            { contacts.map(contact => <li className="user-contacts__item" key={contact.type}><Link to={contact.url} target="_blank">{contact.type}</Link></li>) }
           </ul>
         }
       </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router'
 import { connect } from 'react-redux'
 import { createSelector } from 'reselect'
 
@@ -22,7 +23,7 @@ const PostFull = ({ id, published, flow, hubs, title, author, company, tags, con
           { !!tags && tags.length > 0 &&
             <div className="post__tags">
               <ul className="tags icon_tag">
-                { tags.map(tag => <li><a href={`/#/search/?q=%5B${urlencode(tag)}%5D&target_type=posts`} rel="tag">{tag}</a></li>)}
+                { tags.map(tag => <li><Link to={`/search/?q=%5B${urlencode(tag)}%5D&target_type=posts`} rel="tag">{tag}</Link></li>)}
               </ul>
             </div>
           }

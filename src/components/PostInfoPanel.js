@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router'
 
 import { ga } from '../utils'
 
@@ -62,17 +63,17 @@ const PostInfoPanel = ({ id, author, viewsCount, favoritesCount, isTeaser }) => 
         </li>
         {isTeaser &&
           <li className="postinfo-panel__item post-author">
-            <a title="Автор публикации" className="post-author__link" href={`/#/users/${author.nick}/`}>
+            <Link title="Автор публикации" className="post-author__link" to={`/users/${author.nick}/`}>
               {!!author.avatar ? <img src={author.avatar} className="post-author__pic" alt={author.name} /> : <span className="post-author__pic_default user-pic_blue"></span>}@{author.nick}
-            </a>
+            </Link>
           </li>
         }
         {isTeaser &&
           <li className="postinfo-panel__item postinfo-panel__item_comments">
             <div className="post-comments">
-              <a href={`/#/post/${id}/#comments`} className="post-comments__link" title="Комментировать">
+              <Link to={`/post/${id}/#comments`} className="post-comments__link" title="Комментировать">
                 <span className="post-comments_all">Комментировать</span>
-              </a>
+              </Link>
             </div>
           </li>
         }
@@ -80,16 +81,16 @@ const PostInfoPanel = ({ id, author, viewsCount, favoritesCount, isTeaser }) => 
           {!isTeaser &&
             <ul className="post-share">{/* TODO реализовать шеринг в соцсети, пока удалил код из якорей */}
               <li className="post-share__item">
-                <a href="#" className="post-share__item-link twitter" title="Опубликовать ссылку в Twitter" />
+                <Link to="#" className="post-share__item-link twitter" title="Опубликовать ссылку в Twitter" />
               </li>
               <li className="post-share__item">
-                <a href="#" className="post-share__item-link vkontakte" title="Опубликовать ссылку во ВКонтакте" />
+                <Link to="#" className="post-share__item-link vkontakte" title="Опубликовать ссылку во ВКонтакте" />
               </li>
               <li className="post-share__item">
-                <a href="#" className="post-share__item-link facebook" title="Опубликовать ссылку в Facebook" />
+                <Link to="#" className="post-share__item-link facebook" title="Опубликовать ссылку в Facebook" />
               </li>
               <li className="post-share__item">
-                <a href="#" target="_blank" className="post-share__item-link pocket" title="Добавить ссылку в Pocket" />
+                <Link to="#" target="_blank" className="post-share__item-link pocket" title="Добавить ссылку в Pocket" />
               </li>
             </ul>
           }

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router'
 import PostHeader from './PostHeader'
 import PostInfoPanel from './PostInfoPanel'
 
@@ -9,7 +10,7 @@ const PostTeaser = ({ id, published, flow, hubs, title, content, author, viewsCo
       <div className="content html_format">{content}</div>
       <div className="buttons" style={ { padding: '20px 0 0' } }>
         {/* TODO изменяемое название для habracut */}
-        <a className="button" href={`/#/post/${id}/#habracut`}>Читать дальше →</a>
+        <Link className="button" to={`/post/${id}/#habracut`}>Читать дальше →</Link>
       </div>
     </div>
     <div className="post__footer">

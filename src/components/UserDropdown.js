@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router'
 
 const UserDropdown = () => (
   <div className="dropdown dropdown_user">
@@ -7,31 +8,31 @@ const UserDropdown = () => (
       <img src="//habrastorage.org/getpro/habr/avatars/29a/d0a/09c/29ad0a09c3fa9790266c746e43635ca7.jpg" width={ 36 } height={ 36 } alt="user avatar" />
       </button>
       <div className="dropdown-container dropdown-container_white" aria-hidden="true" role="menu">
-        <a href="/#/users/comerc/" className="dropdown__user-info user-info">
+        <Link to="/users/comerc/" className="dropdown__user-info user-info">
           <span className="user-info__nickname">comerc</span>
           <br />
           <span className="user-info__special">Профиль</span>
-        </a>
+        </Link>
         <br />
         <span className="dropdown__user-stats">У вас <strong>8</strong> голосов за карму и публикации, и еще <strong>16</strong> за комментарии</span>
         <ul className="n-dropdown-menu n-dropdown-menu_profile">
           <li className="n-dropdown-menu__item">
-            <a href="/#/users/comerc/topics/" className="n-dropdown-menu__item-link">Публикации</a>
+            <Link to="/users/comerc/topics/" className="n-dropdown-menu__item-link">Публикации</Link>
           </li>
           <li className="n-dropdown-menu__item">
-            <a href="/#/users/comerc/comments/" className="n-dropdown-menu__item-link">Комментарии</a>
+            <Link to="/users/comerc/comments/" className="n-dropdown-menu__item-link">Комментарии</Link>
           </li>
           <li className="n-dropdown-menu__item">
-            <a href="/#/conversations/" className="n-dropdown-menu__item-link">Диалоги </a>
+            <Link to="/conversations/" className="n-dropdown-menu__item-link">Диалоги </Link>
           </li>
           <li className="n-dropdown-menu__item">
-            <a href="/#/users/comerc/favorites/" className="n-dropdown-menu__item-link">Избранное</a>
+            <Link to="/users/comerc/favorites/" className="n-dropdown-menu__item-link">Избранное</Link>
           </li>
           <li className="n-dropdown-menu__item n-dropdown-menu__item_border">
-            <a href="/#/auth/settings/profile/" className="n-dropdown-menu__item-link">Настройки</a>
+            <Link to="/auth/settings/profile/" className="n-dropdown-menu__item-link">Настройки</Link>
           </li>
           <li className="n-dropdown-menu__item">
-            <a href="/#/logout/comerc/687631967/" className="n-dropdown-menu__item-link">Выйти</a>
+            <Link to="/logout/comerc/687631967/" className="n-dropdown-menu__item-link">Выйти</Link>
           </li>
         </ul>
       </div>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router'
 import Helmet from 'react-helmet'
 
 class NotFound extends Component {
@@ -25,14 +26,14 @@ class NotFound extends Component {
         />
         <div className="main">
           <div className="logo">
-            <a href="/#/" title="На главную страницу"><img alt="" src="https://habrahabr.ru/images/logo.svg"/></a>
+            <Link to="/" title="На главную страницу"><img alt="" src="https://habrahabr.ru/images/logo.svg"/></Link>
           </div>
 
           <h1>Страница не найдена</h1>
           <p>Страница устарела, была удалена или не существовала вовсе</p>
 
           <div className="buttons">
-            <a href="/#/" className="button">Вернуться на главную</a>
+            <Link to="/" className="button">Вернуться на главную</Link>
           </div>
         </div>
       </div>

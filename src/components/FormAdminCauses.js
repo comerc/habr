@@ -1,7 +1,7 @@
 import React from 'react'
 
 const FormAdminCauses = ({ userNick, postId }) => (
-  <form action={`/#/conversations/${userNick}/`} method="GET" className="form form_admin-causes hidden" id="admin_causes">
+  <form action={`/conversations/${userNick}/`} method="GET" className="form form_admin-causes hidden" id="admin_causes">
     <input type="hidden" name="moderation" defaultValue={postId} />
     <fieldset className="form__fieldset form__fieldset_admin-causes">
       <legend className="form__legend">Выберите рекомендации для отправки автору:</legend>

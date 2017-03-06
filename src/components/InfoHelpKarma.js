@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router'
 // TODO React ругается на аттрибуты таблицы: bgcolor
 
 export default () => (
@@ -18,19 +19,19 @@ export default () => (
       </tr><tr>
       </tr><tr>
         <td>≥ 0</td>
-        <td>Создавать <a title="Публикация" href="/#/info/help/posts/#habratopics">публикации</a> в&nbsp;профильные <a title="Хабы" href="/#/info/help/hubs/#hubs">хабы</a> (только для полноценных аккаунтов)</td>
+        <td>Создавать <Link title="Публикация" to="/info/help/posts/#habratopics">публикации</Link> в&nbsp;профильные <Link title="Хабы" to="/info/help/hubs/#hubs">хабы</Link> (только для полноценных аккаунтов)</td>
       </tr><tr>
       </tr><tr>
         <td>≥ 5</td>
-        <td>Создавать <a title="Публикация" href="/#/info/help/posts/#habratopics">публикации</a> в&nbsp;тематические <a title="Хабы" href="/#/info/help/hubs/#hubs">хабы</a> и голосовать за публикации, комментарии, а также за карму других пользователей</td>
+        <td>Создавать <Link title="Публикация" to="/info/help/posts/#habratopics">публикации</Link> в&nbsp;тематические <Link title="Хабы" to="/info/help/hubs/#hubs">хабы</Link> и голосовать за публикации, комментарии, а также за карму других пользователей</td>
       </tr><tr>
       </tr><tr>
         <td>≥ 20</td>
-        <td>Доступна возможность публиковать <a title="Публикация" href="/#/info/help/posts/#habratopics">публикации</a> в&nbsp;«<a title="Хабы" href="/#/hub/i_am_advertising/">Я&nbsp;пиарюсь</a>»</td>
+        <td>Доступна возможность публиковать <Link title="Публикация" to="/info/help/posts/#habratopics">публикации</Link> в&nbsp;«<Link title="Хабы" to="/hub/i_am_advertising/">Я&nbsp;пиарюсь</Link>»</td>
       </tr><tr>
       </tr><tr>
         <td>&gt; 50</td>
-        <td>Начисление одного <a title="Приглашения" href="/#/info/help/registration/#invite">приглашения</a> (единовременно)</td>
+        <td>Начисление одного <Link title="Приглашения" to="/info/help/registration/#invite">приглашения</Link> (единовременно)</td>
       </tr><tr>
     </tr></tbody></table><br/>
 
@@ -55,7 +56,7 @@ export default () => (
       </tr><tr>
       </tr><tr>
         <td>От −100 и&nbsp;ниже</td>
-        <td>1&nbsp;комментарий в&nbsp;неделю и&nbsp;<a title="Значки" href="/#/info/help/habracentre/#badgets">значок</a> «Тролль»</td>
+        <td>1&nbsp;комментарий в&nbsp;неделю и&nbsp;<Link title="Значки" to="/info/help/habracentre/#badgets">значок</Link> «Тролль»</td>
       </tr><tr>
     </tr></tbody></table><br/>
 
@@ -104,9 +105,9 @@ export default () => (
     <p>Ну&nbsp;а&nbsp;потом есть несколько вариантов:</p>
 
     <ul>
-      <li><strong>Recovery mode.</strong> У&nbsp;пользователей с&nbsp;отрицательной кармой (до&nbsp;−30&nbsp;включительно) есть шанс вернуться в&nbsp;ряды <a href="/#/info/help/habracentre/#badgets">захабренных</a>&nbsp;— раз в&nbsp;неделю есть возможность написать публикацию или перевод в&nbsp;любой <a href="/#/info/help/hubs/">профильный хаб</a>. У&nbsp;таких публикаций будет пометка «Recovery Mode»&nbsp;— если повезёт, то&nbsp;сообщество оценит старания и&nbsp;вытащит пользователя из&nbsp;кармаямы.</li>
+      <li><strong>Recovery mode.</strong> У&nbsp;пользователей с&nbsp;отрицательной кармой (до&nbsp;−30&nbsp;включительно) есть шанс вернуться в&nbsp;ряды <Link to="/info/help/habracentre/#badgets">захабренных</Link>&nbsp;— раз в&nbsp;неделю есть возможность написать публикацию или перевод в&nbsp;любой <Link to="/info/help/hubs/">профильный хаб</Link>. У&nbsp;таких публикаций будет пометка «Recovery Mode»&nbsp;— если повезёт, то&nbsp;сообщество оценит старания и&nbsp;вытащит пользователя из&nbsp;кармаямы.</li>
 
-      <li><strong>Reset.</strong> Эта опция находится в&nbsp;<a href="/#/info/help/habracentre/">хабрацентре</a> и&nbsp;позволяет обнулить любую (как положительную, так и&nbsp;сильно отрицательную) карму. Крайняя мера на&nbsp;тот случай, когда уже ничто другое не&nbsp;помогает, или хочется начать «с&nbsp;чистого листа». Но&nbsp;имейте в&nbsp;виду, что воспользоваться этой опцией можно только один раз за&nbsp;всё время регистрации на&nbsp;сайте. Мы&nbsp;даём второй шанс, но&nbsp;только однажды.</li>
+      <li><strong>Reset.</strong> Эта опция находится в&nbsp;<Link to="/info/help/habracentre/">хабрацентре</Link> и&nbsp;позволяет обнулить любую (как положительную, так и&nbsp;сильно отрицательную) карму. Крайняя мера на&nbsp;тот случай, когда уже ничто другое не&nbsp;помогает, или хочется начать «с&nbsp;чистого листа». Но&nbsp;имейте в&nbsp;виду, что воспользоваться этой опцией можно только один раз за&nbsp;всё время регистрации на&nbsp;сайте. Мы&nbsp;даём второй шанс, но&nbsp;только однажды.</li>
     </ul>
 
     <p>Ещё можно попытаться писать восхитительные комментарии, но&nbsp;это вряд&nbsp;ли поможет оперативно выйти из&nbsp;большого минуса.</p>
@@ -115,10 +116,10 @@ export default () => (
 
     <p>Раз уж&nbsp;мы&nbsp;заговорили о&nbsp;рейтингах, то&nbsp;огласим сразу весь список:</p>
     <ul>
-      <li><a href="/#/top/">Рейтинг публикаций</a><br/></li>
-      <li><a href="/#/companies/">Рейтинг компаний</a><br/></li>
-      <li><a href="/#/hubs/">Рейтинг хабов</a><br/></li>
-      <li><a href="/#/users/">Рейтинг людей</a><br/></li>
+      <li><Link to="/top/">Рейтинг публикаций</Link><br/></li>
+      <li><Link to="/companies/">Рейтинг компаний</Link><br/></li>
+      <li><Link to="/hubs/">Рейтинг хабов</Link><br/></li>
+      <li><Link to="/users/">Рейтинг людей</Link><br/></li>
     </ul>
 
     <p>В&nbsp;общем и&nbsp;целом принцип работы везде один: чем выше активность, тем выше рейтинг.</p>

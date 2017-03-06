@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import thunk from 'redux-thunk'
-import { Router, hashHistory } from 'react-router'
+import { Router, browserHistory } from 'react-router'
 import { syncHistoryWithStore } from 'react-router-redux'
 import createLogger from 'redux-logger'
 
@@ -13,7 +13,7 @@ import routes from './routes'
 
 const logger = createLogger()
 const store = createStore(reducer, composeWithDevTools(applyMiddleware(thunk, logger)))
-const history = syncHistoryWithStore(hashHistory, store)
+const history = syncHistoryWithStore(browserHistory, store)
 
 render(
   <Provider store={store}>

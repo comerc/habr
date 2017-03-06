@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router'
 import styled from 'styled-components'
 
 const InfoHelpPosts = () => (
@@ -9,7 +10,7 @@ const InfoHelpPosts = () => (
 
     <p>Сам процесс создания публикации довольно прост:</p>
     <ul>
-      <li>кликните по&nbsp;иконке карандаша в&nbsp;левом меню&nbsp;— <a href="/#/topic/add/">{window.location.origin}/topic/add/</a>;</li>
+      <li>кликните по&nbsp;иконке карандаша в&nbsp;левом меню&nbsp;— <Link to="/topic/add/">{window.location.origin}/topic/add/</Link>;</li>
       <li>выберите поток, в&nbsp;который будет размещена публикация;</li>
       <li>выберите хаб, лучше всего подходящий по&nbsp;тематике (или нескольких хабов);</li>
       <li>если ваша публикация является обучающей, уроком или how-to&nbsp;— отметьте чекбокс «Обучающий материал», это поможет визуально выделить ее&nbsp;среди прочих;</li>
@@ -29,7 +30,7 @@ const InfoHelpPosts = () => (
     <h2 id="black-and-white">Признаки хорошей и&nbsp;плохой публикации</h2>
     <p><b>Хорошая публикация:</b></p>
     <ul><li>Содержит авторский контент;</li>
-      <li>Удобна для чтения, разбита на&nbsp;абзацы и&nbsp;в&nbsp;целом хорошо отформатирована. Картинки залиты на&nbsp;<a href="https://habrastorage.org">Habrastorage</a>;</li>
+      <li>Удобна для чтения, разбита на&nbsp;абзацы и&nbsp;в&nbsp;целом хорошо отформатирована. Картинки залиты на&nbsp;<Link to="https://habrastorage.org">Habrastorage</Link>;</li>
       <li>Написана максимально грамотным для индивида русским языком;</li>
       <li>Не&nbsp;содержит того, что есть в&nbsp;плохих публикациях.</li>
     </ul>
@@ -47,7 +48,7 @@ const InfoHelpPosts = () => (
     </ul>
 
     <h2 id="allowed_tags">Разрешённые html-теги</h2>
-    <p>При написании <a title="Публикация" href="/#/info/help/posts/#habratopics">публикаций</a> и&nbsp;комментариев можно использовать следующие html- и&nbsp;не&nbsp;совсем html-теги:</p>
+    <p>При написании <Link title="Публикация" to="/info/help/posts/#habratopics">публикаций</Link> и&nbsp;комментариев можно использовать следующие html- и&nbsp;не&nbsp;совсем html-теги:</p>
 
     <div className="help_holder">
 
@@ -79,7 +80,7 @@ const InfoHelpPosts = () => (
           <td><code>&lt;a&gt;&lt;/a&gt;</code></td>
           <td>
             <p>Вставка ссылки, в атрибуте <code>href</code> указывается желаемый интернет-адрес или якорь (anchor) для навигации по странице.</p>
-            <pre><code className="hljs livecodeserver">&lt;<span className="hljs-keyword">a</span> href=<span className="hljs-string">"http://your_link_path.ru"</span>&gt;Текст ссылки&lt;/<span className="hljs-keyword">a</span>&gt;</code></pre>
+            <pre><code className="hljs livecodeserver">&lt;<span className="hljs-keyword">a</span> to=<span className="hljs-string">"http://your_link_path.ru"</span>&gt;Текст ссылки&lt;/<span className="hljs-keyword">a</span>&gt;</code></pre>
           </td>
         </tr>
 
@@ -87,7 +88,7 @@ const InfoHelpPosts = () => (
           <td><code>&lt;anchor&gt;&lt;/anchor&gt;</code></td>
           <td>
             <p>Тег для указания якоря. Для вызова используйте тег вставки ссылок.</p>
-            <pre><code className="hljs livecodeserver">&lt;<span className="hljs-keyword">a</span> href=<span className="hljs-string">"#example"</span>&gt;Example&lt;/<span className="hljs-keyword">a</span>&gt;</code></pre>
+            <pre><code className="hljs livecodeserver">&lt;<span className="hljs-keyword">a</span> to=<span className="hljs-string">"#example"</span>&gt;Example&lt;/<span className="hljs-keyword">a</span>&gt;</code></pre>
           </td>
         </tr>
 
@@ -216,7 +217,7 @@ const InfoHelpPosts = () => (
           <td><code>&lt;cut/&gt;</code>
 
           </td><td>
-            <p>Используется только в текстах <a href="/#/info/help/posts/#habratopics">публикаций</a>, скрывает под кат часть текста, следующую за тегом (появится кнопка с текстом «Читать дальше»). Чтобы изменить текст в кнопке, используйте аттрибут <code>text="..."</code></p>
+            <p>Используется только в текстах <Link to="/info/help/posts/#habratopics">публикаций</Link>, скрывает под кат часть текста, следующую за тегом (появится кнопка с текстом «Читать дальше»). Чтобы изменить текст в кнопке, используйте аттрибут <code>text="..."</code></p>
             <pre><code className="hljs twig"><span className="xml"><span className="hljs-tag">&lt;<span className="hljs-name">cut</span>/&gt;</span>, <span className="hljs-tag">&lt;<span className="hljs-name">cut</span> <span className="hljs-attr">text</span>=<span className="hljs-string">"Ваш текст"</span>/&gt;</span></span></code></pre>
           </td>
         </tr>
@@ -232,7 +233,7 @@ const InfoHelpPosts = () => (
         <tr>
           <td><code>&lt;oembed&gt;&lt;/oembed&gt;</code></td>
           <td>
-            <p>Вставка интерактивного слайд-шоу. Пока поддерживается только сервис <a href="http://slideshare.net">Slideshare.net</a> и <a href="http://scribd.com">Scribd.com</a>.</p>
+            <p>Вставка интерактивного слайд-шоу. Пока поддерживается только сервис <Link to="http://slideshare.net">Slideshare.net</Link> и <Link to="http://scribd.com">Scribd.com</Link>.</p>
             <pre><code className="hljs twig"><span className="xml"><span className="hljs-tag">&lt;<span className="hljs-name">oembed</span>&gt;</span>http://slideshare.net/<span className="hljs-tag">&lt;/<span className="hljs-name">oembed</span>&gt;</span></span></code></pre>
           </td>
         </tr>
@@ -257,8 +258,8 @@ const InfoHelpPosts = () => (
 
     <h2 id="formula">Добавление формул</h2>
 
-    <p>Вы также можете добавлять в свои публикации математические формулы, используя язык разметки <a href="https://ru.wikipedia.org/wiki/LaTeX">LaTeX</a>.</p>
-    <p>Для отрисовки формул на странице мы используем библиотеку <a href="https://www.mathjax.org/">MathJax</a>.</p>
+    <p>Вы также можете добавлять в свои публикации математические формулы, используя язык разметки <Link to="https://ru.wikipedia.org/wiki/LaTeX">LaTeX</Link>.</p>
+    <p>Для отрисовки формул на странице мы используем библиотеку <Link to="https://www.mathjax.org/">MathJax</Link>.</p>
 
     <p>Чтобы добавить формулу нажмите на иконку <code>Σ</code> в тулбаре. В появившемся модальном окне выберите строчный или блочный тип формулы.</p>
     <ul>
@@ -271,7 +272,7 @@ const InfoHelpPosts = () => (
     <h2 id="ppa">ППА</h2>
     <p>Аббревиатура «<b>ППА</b>» на&nbsp;Хабрахабре расшифровывается как Программа Поощрения Авторов. Помимо признания аудитории, авторы могут получать денежное вознаграждение за&nbsp;хорошие публикации&nbsp;— очевидно&nbsp;же!</p>
 
-    <p>В&nbsp;программе могут принимать участие пользователи, обладающие хотя&nbsp;бы одним из&nbsp;<a title="Значки" href="/#/info/help/habracentre/#badgets">значков</a>: «Автор», «Звезда», «Легенда» и&nbsp;«Старожил». А&nbsp;дальше, всё, что надо&nbsp;— просто размещать интересные публикации или переводы в&nbsp;<a title="Хабы" href="/#/info/help/hubs/#hubs">профильные хабы</a>, не&nbsp;более того. Более подробно узнать о&nbsp;ППА можно на&nbsp;<a title="ППА" href="/#/ppa/faq/">отдельной странице</a>.</p>
+    <p>В&nbsp;программе могут принимать участие пользователи, обладающие хотя&nbsp;бы одним из&nbsp;<Link title="Значки" to="/info/help/habracentre/#badgets">значков</Link>: «Автор», «Звезда», «Легенда» и&nbsp;«Старожил». А&nbsp;дальше, всё, что надо&nbsp;— просто размещать интересные публикации или переводы в&nbsp;<Link title="Хабы" to="/info/help/hubs/#hubs">профильные хабы</Link>, не&nbsp;более того. Более подробно узнать о&nbsp;ППА можно на&nbsp;<Link title="ППА" to="/ppa/faq/">отдельной странице</Link>.</p>
 
 
 

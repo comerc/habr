@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router'
 // TODO React ругается на аттрибуты таблицы: colspan, border, align, valign
 export default () => (
   <div className="info_page">
@@ -14,11 +15,11 @@ export default () => (
       <li>Иная информация «О&nbsp;себе», которую он&nbsp;пожелал указать.</li>
     </ul>
 
-    <p>Ряд информации из&nbsp;профиля выводится на&nbsp;специально созданной плашке автора, которая отображается под каждой публикацией пользователя. Чтобы выбрать, что именно отображать в&nbsp;своей плашке, нужно отметить соответствующие контакты чекбоксом на&nbsp;странице <a href="/#/auth/settings/profile/">настроек профиля.</a></p>
+    <p>Ряд информации из&nbsp;профиля выводится на&nbsp;специально созданной плашке автора, которая отображается под каждой публикацией пользователя. Чтобы выбрать, что именно отображать в&nbsp;своей плашке, нужно отметить соответствующие контакты чекбоксом на&nbsp;странице <Link to="/auth/settings/profile/">настроек профиля.</Link></p>
 
     <h2>Как изменить информацию о&nbsp;себе?</h2>
 
-    <p>Очень просто. Авторизируйтесь&nbsp;— ссылка на&nbsp;<a href="/#/auth/settings/">страницу настроек</a> будет видна в&nbsp;левом меню.</p>
+    <p>Очень просто. Авторизируйтесь&nbsp;— ссылка на&nbsp;<Link to="/auth/settings/">страницу настроек</Link> будет видна в&nbsp;левом меню.</p>
 
     <h2 id="badgets">Что такое значки?</h2>
 
@@ -29,11 +30,11 @@ export default () => (
     <table border="0">
       <tbody><tr>
         <td width="140" className="habr-badge__title" align="center" valign="top"><span className="habr-badge">Захабренный</span></td>
-        <td valign="top" className="habr-badge__desc">Пользователь с&nbsp;положительной <a title="Карма" href="/#/info/help/karma/#karma">кармой</a> (больше 0). В&nbsp;зависимости от&nbsp;величины кармы может размещать <a title="Публикация" href="/#/info/help/posts/#habratopics">публикации</a> в&nbsp;различные <a title="Хабы" href="/#/info/help/hubs/">хабы</a>,  писать комментарии и&nbsp;голосовать. Может использовать в&nbsp;комментариях <a title="HTML-теги" href="/#/info/help/posts/#allowed_tags">HTML-теги</a>.</td>
+        <td valign="top" className="habr-badge__desc">Пользователь с&nbsp;положительной <Link title="Карма" to="/info/help/karma/#karma">кармой</Link> (больше 0). В&nbsp;зависимости от&nbsp;величины кармы может размещать <Link title="Публикация" to="/info/help/posts/#habratopics">публикации</Link> в&nbsp;различные <Link title="Хабы" to="/info/help/hubs/">хабы</Link>,  писать комментарии и&nbsp;голосовать. Может использовать в&nbsp;комментариях <Link title="HTML-теги" to="/info/help/posts/#allowed_tags">HTML-теги</Link>.</td>
       </tr>
       <tr>
         <td width="140" className="habr-badge__title" align="center" valign="top"><span className="habr-badge">Отхабренный</span></td>
-        <td valign="top" className="habr-badge__desc">Пользователь с&nbsp;отрицательной <a title="Карма" href="/#/info/help/karma/#karma">кармой</a> (меньше 0). В&nbsp;зависимости от&nbsp;«глубины погружения» начинает испытывать трудности с&nbsp;комментированием. Более того, не&nbsp;может размещать <a title="Публикация" href="/#/info/help/posts/#habratopics">публикации</a>, голосовать и&nbsp;использовать <a title="HTML-теги" href="/#/info/help/posts/#allowed_tags">HTML-теги</a> в&nbsp;комментариях.</td>
+        <td valign="top" className="habr-badge__desc">Пользователь с&nbsp;отрицательной <Link title="Карма" to="/info/help/karma/#karma">кармой</Link> (меньше 0). В&nbsp;зависимости от&nbsp;«глубины погружения» начинает испытывать трудности с&nbsp;комментированием. Более того, не&nbsp;может размещать <Link title="Публикация" to="/info/help/posts/#habratopics">публикации</Link>, голосовать и&nbsp;использовать <Link title="HTML-теги" to="/info/help/posts/#allowed_tags">HTML-теги</Link> в&nbsp;комментариях.</td>
       </tr>
       <tr>
         <td width="140" className="habr-badge__title" align="center" valign="top"><span className="habr-badge">Комментатор</span></td>
@@ -45,11 +46,11 @@ export default () => (
       </tr>
       <tr>
         <td width="140" className="habr-badge__title" align="center" valign="top"><span className="habr-badge">Старожил</span></td>
-        <td valign="top" className="habr-badge__desc">Пользователь, зарегистрированный более 3&nbsp;лет назад и&nbsp;имеющий карму +50&nbsp;и&nbsp;выше. Может участвовать в&nbsp;<a title="Программа Поощрения Авторов" href="/#/info/help/posts/#ppa">ППА</a>. Вес положительного голоса за публикацию равен&nbsp;+2.</td>
+        <td valign="top" className="habr-badge__desc">Пользователь, зарегистрированный более 3&nbsp;лет назад и&nbsp;имеющий карму +50&nbsp;и&nbsp;выше. Может участвовать в&nbsp;<Link title="Программа Поощрения Авторов" to="/info/help/posts/#ppa">ППА</Link>. Вес положительного голоса за публикацию равен&nbsp;+2.</td>
       </tr>
       <tr>
         <td width="140" className="habr-badge__title" align="center" valign="top"><span className="habr-badge">Автор</span></td>
-        <td valign="top" className="habr-badge__desc">Пользователь, на счету которого от 10 публикаций, тепло встреченных хабрасообществом (от +50 голосов за каждый). Имеет карму +50 и выше, может участвовать в <a title="Программа Поощрения Авторов" href="/#/info/help/posts/#ppa">ППА</a> и получает ещё одно особо секретное преимущество.  Вес положительного голоса за публикацию равен&nbsp;+2.</td>
+        <td valign="top" className="habr-badge__desc">Пользователь, на счету которого от 10 публикаций, тепло встреченных хабрасообществом (от +50 голосов за каждый). Имеет карму +50 и выше, может участвовать в <Link title="Программа Поощрения Авторов" to="/info/help/posts/#ppa">ППА</Link> и получает ещё одно особо секретное преимущество.  Вес положительного голоса за публикацию равен&nbsp;+2.</td>
       </tr>
       <tr>
         <td width="140" className="habr-badge__title" align="center" valign="top"><span className="habr-badge">Звезда</span></td>

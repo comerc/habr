@@ -60,6 +60,6 @@ export default (
 
 // TODO настроить редирект url без оконечного / на уровне насторек сервера nginx
 
-// TODO редирект, если блог компании: `/#/post/${id}/` > `/#/company/${nick}/blog/${id}/`
+// TODO редирект, если блог компании: `/post/${id}/` > `/company/${nick}/blog/${id}/`
 
 // TODO подключить https://github.com/taion/react-router-scroll
