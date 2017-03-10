@@ -20,30 +20,32 @@ import InfoHelpLenta from './components/InfoHelpLenta'
 import InfoHelpPosts from './components/InfoHelpPosts'
 
 export default (
-  <Route path="/" component={App}>
-    <IndexRoute component={PostTeaserList} />
-    <Route path="flows" component={PostTeaserList}>
-      <Route path=":selectedFlow" />
-    </Route>
-    <Route path="post" component={PostFull}>
-      <Route path=":postId" />
-    </Route>
-    <Route path="topic/add" component={TopicAdd} title="Новая публикация" />
-    <Route path="feedback" component={Feedback} title="Обратная связь" />
-    <Redirect from="info" to="info/help/" />
-    <Route path="info">
-      <Route path="about" component={InfoAbout} title="О сайте" />
-      <Route path="help">
-        <IndexRoute component={InfoHelp} title="Помощь" />
-        <Route path="rules" component={InfoHelpRules} title="Помощь → Правила сайта" />
-        <Route path="other" component={InfoHelpOther} title="Помощь → Разное" />
-        <Route path="registration" component={InfoHelpRegistration} title="Помощь → Регистрация" />
-        <Route path="habracentre" component={InfoHelpHabracentre} title="Помощь → Хабрацентр" />
-        <Route path="karma" component={InfoHelpKarma} title="Помощь → Карма" />
-        <Route path="settings" component={InfoHelpSettings} title="Помощь → Настройки" />
-        <Route path="hubs" component={InfoHelpHubs} title="Помощь → Хабы" />
-        <Route path="lenta" component={InfoHelpLenta} title="Помощь → Лента" />
-        <Route path="posts" component={InfoHelpPosts} title="Помощь → Публикации" />
+  <Route path="/">
+    <Route component={App}>
+      <IndexRoute component={PostTeaserList} />
+      <Route path="flows" component={PostTeaserList}>
+        <Route path=":selectedFlow" />
+      </Route>
+      <Route path="post" component={PostFull}>
+        <Route path=":postId" />
+      </Route>
+      <Route path="topic/add" component={TopicAdd} title="Новая публикация" />
+      <Route path="feedback" component={Feedback} title="Обратная связь" />
+      <Redirect from="info" to="info/help/" />
+      <Route path="info">
+        <Route path="about" component={InfoAbout} title="О сайте" />
+        <Route path="help">
+          <IndexRoute component={InfoHelp} title="Помощь" />
+          <Route path="rules" component={InfoHelpRules} title="Помощь → Правила сайта" />
+          <Route path="other" component={InfoHelpOther} title="Помощь → Разное" />
+          <Route path="registration" component={InfoHelpRegistration} title="Помощь → Регистрация" />
+          <Route path="habracentre" component={InfoHelpHabracentre} title="Помощь → Хабрацентр" />
+          <Route path="karma" component={InfoHelpKarma} title="Помощь → Карма" />
+          <Route path="settings" component={InfoHelpSettings} title="Помощь → Настройки" />
+          <Route path="hubs" component={InfoHelpHubs} title="Помощь → Хабы" />
+          <Route path="lenta" component={InfoHelpLenta} title="Помощь → Лента" />
+          <Route path="posts" component={InfoHelpPosts} title="Помощь → Публикации" />
+        </Route>
       </Route>
     </Route>
     <Route path="*" component={NotFound} />
