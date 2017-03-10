@@ -1,8 +1,10 @@
-export const ga = (eventCategory, eventAction, eventLabel) => () => {
+import memoizee from 'memoizee'
+
+export const ga = memoizee((eventCategory, eventAction, eventLabel) => () => {
   if (typeof window.ga === 'function') {
     window.ga('send', 'event', eventCategory, eventAction, eventLabel)
   }
-}
+})
 
 export const plural = (value, form1, form2, form3) => {
   // TODO реализовать plural
