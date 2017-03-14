@@ -3,6 +3,11 @@ import { createAction, createReducer } from 'redux-act'
 export const actions = {
   inputTitle: createAction('@@edit_post/INPUT_TITLE', title => ({ title })),
   submit: createAction('@@edit_post/SUBMIT', post => post),
+  sendToServer: post => dispatch => {
+    //...
+    console.log('SEND')
+    dispatch(actions.submit(post))
+  }
 }
 
 const initialState = {
