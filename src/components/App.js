@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
-// import ReactDOM from 'react-dom'
 import Helmet from 'react-helmet'
 
 import { ga } from '../utils'
@@ -9,13 +8,11 @@ import MainNavBar from './MainNavBar'
 import UserMenu from './UserMenu'
 import DefaultPageHeader from './DefaultPageHeader'
 
-// TODO при переходе на страницу назад в браузе, не нужно выполнять скроллинг
-
 class App extends Component {
 
   componentDidUpdate() {
     // ReactDOM.findDOMNode(this).scrollIntoView()
-    window.scrollTo(0, 0)
+    // window.scrollTo(0, 0)
   }
 
   componentWillMount() {
