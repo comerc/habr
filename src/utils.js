@@ -1,6 +1,6 @@
 import memoize from 'lodash.memoize'
 
-export const ga = memoize((eventCategory, eventAction, eventLabel) => () => {
+export const ga = (eventCategory, eventAction, eventLabel) => memoize(() => {
   if (typeof window.ga === 'function') {
     window.ga('send', 'event', eventCategory, eventAction, eventLabel)
   }
