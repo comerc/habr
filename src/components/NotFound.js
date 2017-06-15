@@ -3,16 +3,14 @@ import { Link } from 'react-router'
 import Helmet from 'react-helmet'
 
 class NotFound extends Component {
-
   componentWillMount() {
     document.body.style.display = 'none'
   }
 
   componentDidMount() {
     // HACK стили подключаются в Helmet после рендеринга страницы
-    setTimeout(
-      () => document.body.style.display = 'block'
-    , 100)
+    // TODO: https://habrahabr.ru/post/322084/#comment_10266132
+    setTimeout(() => (document.body.style.display = 'block'), 100)
   }
 
   render() {
@@ -20,13 +18,13 @@ class NotFound extends Component {
       <div id="layout">
         <Helmet
           defaultTitle="Хабрахабр"
-          link={[
-            {rel: 'stylesheet', href: '/styles/access_deny.css', media: 'all'}
-          ]}
+          link={[{ rel: 'stylesheet', href: '/styles/access_deny.css', media: 'all' }]}
         />
         <div className="main">
           <div className="logo">
-            <Link to="/" title="На главную страницу"><img alt="" src="https://habrahabr.ru/images/logo.svg"/></Link>
+            <Link to="/" title="На главную страницу">
+              <img alt="" src="https://habrahabr.ru/images/logo.svg" />
+            </Link>
           </div>
 
           <h1>Страница не найдена</h1>
